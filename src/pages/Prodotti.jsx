@@ -20,10 +20,10 @@ export default function Prodotti() {
     return (
         <>
 
-            <main>
-                <ul className="d-flex row gap-3">
+            <main className="">
+                <ul className="row g-1">
                     {prodotti.map(prod => (
-                        <li key={prod.id} className="card col-3">
+                        <li key={prod.id} className="card col-12 col-sm-6 col-md-4 col-lg-3">
                             <img src={prod.image} alt="" />
                             <div>
                                 <h5>{prod.title}</h5>
