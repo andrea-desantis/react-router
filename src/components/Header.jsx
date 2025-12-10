@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-export default function Header(){
+export default function Header() {
     const navLinks = [
         {
             title: "Home",
@@ -14,18 +14,21 @@ export default function Header(){
             path: "/prodotti",
         }
     ]
-    return(
-        <header>
+    return (
+        <header className="navbar bg-body-tertiary">
+            <section className="container-fluid">
+                <h1 className="">React Router Store</h1>
+                <ul className="">
+                    {navLinks.map((link, index) => (
+                        <li key={index}>
+                            <NavLink to={link.path}>
+                                {link.title}
+                            </NavLink>
+                        </li>
+                    ))}
+                </ul>
+            </section>
 
-            <ul>
-                {navLinks.map((link, index) => (
-                    <li key={index}>
-                        <NavLink to={link.path}>
-                            {link.title}
-                        </NavLink>
-                    </li>
-                ))}
-            </ul>
 
         </header>
     );
