@@ -25,7 +25,7 @@ export default function Prodotti() {
                 <ul className="row g-1">
                     {prodotti.map(prod => (
 
-                        <li key={prod.id} className="card col-12 col-sm-6 col-md-4 col-lg-3">
+                        <li key={prod.id} className="card col-sm-6 col-md-3 col-lg-2">
                             <img src={prod.image} alt="" />
                             <div className="">
                                 <h5>{prod.title}</h5>
