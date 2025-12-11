@@ -6,20 +6,24 @@ import Header from './components/Header';
 import Homepage from './pages/Homepage';
 import ChiSiamo from './pages/ChiSiamo';
 import Prodotti from './pages/Prodotti';
+import Layout from './layouts/Layout';
 function App() {
-  
+
 
   return (
     <>
-        <BrowserRouter>
+      <BrowserRouter>
         <Header />
-          <Routes>
-            <Route path="/" element={<Homepage />}/>
-            <Route path="/chi-siamo" element={<ChiSiamo />}/>
-            <Route path="/prodotti" element={<Prodotti />}/>
-          </Routes>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/chi-siamo" element={<ChiSiamo />} />
+            <Route path="/prodotti" element={<Prodotti />} />
+          </Route>
 
-        </BrowserRouter>
+        </Routes>
+
+      </BrowserRouter>
     </>
   )
 }

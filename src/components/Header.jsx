@@ -15,10 +15,10 @@ export default function Header() {
         }
     ]
     return (
-        <header className="navbar bg-body-tertiary">
-            <section className="container-fluid">
+        <header className="navbar bg-body-tertiary px-5 py-4">
+            
                 <h1 className="">React Router Store</h1>
-                <ul className="">
+                <ul className="navbar-nav  flex-row gap-3">
                     {navLinks.map((link, index) => (
                         <li key={index}>
                             <NavLink to={link.path}>
@@ -27,9 +27,7 @@ export default function Header() {
                         </li>
                     ))}
                 </ul>
-            </section>
-
-
+           
         </header>
     );
 }
