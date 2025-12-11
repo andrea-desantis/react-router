@@ -27,11 +27,16 @@ export default function Dettaglio() {
     return (
         <>
             {prodotto !== null && (
-                <div>
-                    <img src={prodotto} alt="" />
-                    <div>
-                        <h2>{prodotto.title}</h2>
-                        <p>{prodotto.description}</p>
+                <div className="d-flex">
+                    <img src={prodotto.image} alt="" />
+                    <div className="p-5 ">
+                        <h2 className="">{prodotto.title}</h2>
+                        <h5 className="">{prodotto.category}</h5>
+                        <p className="py-2">{prodotto.description}</p>
+                        <div className="d-flex justify-content-between">
+                            <p>{prodotto.price} $</p>
+                            <p>{prodotto.rating.rate}/5</p>
+                        </div>
 
                     </div>
 
