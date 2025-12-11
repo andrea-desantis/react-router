@@ -27,7 +27,7 @@ export default function Dettaglio() {
     return (
         <>
             {prodotto !== null && (
-                <div className="d-flex">
+                <div className="d-flex ">
                     <img src={prodotto.image} alt="" />
                     <div className="p-5 ">
                         <h2 className="">{prodotto.title}</h2>
@@ -37,11 +37,11 @@ export default function Dettaglio() {
                             <p>{prodotto.price} $</p>
                             <p>{prodotto.rating.rate}/5</p>
                         </div>
-                        <div>
+                        <div className="d-flex justify-content-between">
                             <button onClick={() => navigate(`/prodotti/${prodotto.id - 1}`)}>Prodotto precedente</button>
                             <button onClick={() => navigate(`/prodotti/${prodotto.id + 1}`)}>Prodotto successivo</button>
                         </div>
-                        <div>
+                        <div className="py-2 ">
                             <button onClick={() => navigate("/prodotti")}>torna ai prodotti</button>
                         </div>
                     </div>
