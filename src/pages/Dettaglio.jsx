@@ -18,8 +18,8 @@ export default function Dettaglio() {
             })
             .catch((err) => {
                 console.log(err);
-                // if (err.status === 404) {
-                //     navigate("/prodotti");
+                //  if (err.response.status === 404) {
+                //    navigate("/prodotti");
                 // }
             })
     }, [id]);
@@ -37,9 +37,14 @@ export default function Dettaglio() {
                             <p>{prodotto.price} $</p>
                             <p>{prodotto.rating.rate}/5</p>
                         </div>
-
+                        <div>
+                            <button onClick={() => navigate(`/prodotti/${prodotto.id - 1}`)}>Prodotto precedente</button>
+                            <button onClick={() => navigate(`/prodotti/${prodotto.id + 1}`)}>Prodotto successivo</button>
+                        </div>
+                        <div>
+                            <button onClick={() => navigate("/prodotti")}>torna ai prodotti</button>
+                        </div>
                     </div>
-
                 </div>
             )}
         </>
